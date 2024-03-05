@@ -3,11 +3,11 @@ package reservahabitaciones;
 import java.util.HashSet;
 import java.util.Set;
 
-public class Grupo {
+public class Equipo {
   private Integer id;
   private String nombre;
   private int cantidad;
-  private Set<Tema> asignaturas;
+  private Set<Tema> temas;
   
   public Integer getId() {
     return id;
@@ -33,23 +33,23 @@ public class Grupo {
     this.cantidad = cantidad;
   }
   
-  public Set<Tema> getAsignaturas() {
-    return asignaturas;
+  public Set<Tema> getTemas() {
+    return temas;
   }
   
-  public void setAsignaturas(Set<Tema> asignaturas) {
-    this.asignaturas = asignaturas;
+  public void setTemas(Set<Tema> temas) {
+    this.temas = temas;
   }
   
-  public Grupo() {
-    asignaturas = new HashSet<Tema>();
+  public Equipo() {
+    temas = new HashSet<Tema>();
   }
   
-  public Grupo(int id, String nombre, int cantidad, Set<Tema> asignaturas) {
+  public Equipo(int id, String nombre, int cantidad, Set<Tema> temas) {
     setId(id);
     setNombre(nombre);
     setCantidad(cantidad);
-    setAsignaturas(asignaturas);
+    setTemas(temas);
   }
   
   @Override
@@ -59,7 +59,7 @@ public class Grupo {
   
   @Override
   public boolean equals(Object obj) {
-    if (obj.getClass().isAssignableFrom(Grupo.class)) {      
+    if (obj.getClass().isAssignableFrom(Equipo.class)) {      
       return hashCode() == obj.hashCode();
     } else {
       return false;

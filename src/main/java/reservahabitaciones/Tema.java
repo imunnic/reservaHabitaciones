@@ -8,7 +8,9 @@ public class Tema {
 
   private String nombre;
 
-  private Set<Habitacion> lugares;
+  private Set<Habitacion> habitaciones;
+  
+  private Set<Equipo> equipos;
   
   public Integer getId() {
     return id;
@@ -26,22 +28,32 @@ public class Tema {
     this.nombre = nombre;
   }
   
-  public void setLugares(Set<Habitacion> lugares) {
-    this.lugares = lugares;
+  public void setHabitaciones(Set<Habitacion> habitaciones) {
+    this.habitaciones = habitaciones;
   }
   
-  public Set<Habitacion> getLugares() {
-    return lugares;
+  public Set<Habitacion> getHabitaciones() {
+    return habitaciones;
+  }
+  
+  public void setEquipos(Set<Equipo> equipos) {
+    this.equipos = equipos;
+  }
+  
+  public Set<Equipo> getEquipos() {
+    return equipos;
   }
   
   public Tema() {
-    lugares = new HashSet<Habitacion>();
+    habitaciones = new HashSet<Habitacion>();
+    equipos = new HashSet<Equipo>();
   }
 
-  public Tema(Integer id, String nombre, Set<Habitacion> lugares) {
+  public Tema(Integer id, String nombre, Set<Habitacion> habitaciones, Set<Equipo> equipos) {
     setId(id);
     setNombre(nombre);
-    setLugares(lugares);
+    setHabitaciones(habitaciones);
+    setEquipos(equipos);
   }
   
   @Override

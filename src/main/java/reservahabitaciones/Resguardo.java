@@ -4,10 +4,10 @@ import java.time.LocalDate;
 
 public class Resguardo {
   private Long id;
-  private Tema asignatura;
-  private Responsable profesor;
-  private Habitacion lugar;
-  private Grupo grupo;
+  private Tema tema;
+  private Responsable responsable;
+  private Habitacion habitacion;
+  private Equipo equipo;
   private int horaInicio;
   private LocalDate fecha;
   
@@ -19,36 +19,36 @@ public class Resguardo {
     this.id = id;
   }
   
-  public Tema getAsignatura() {
-    return asignatura;
+  public Tema getTema() {
+    return tema;
   }
   
-  public void setAsignatura(Tema asignatura) {
-    this.asignatura = asignatura;
+  public void setTema(Tema tema) {
+    this.tema = tema;
   }
   
-  public Responsable getProfesor() {
-    return profesor;
+  public Responsable getResponsable() {
+    return responsable;
   }
   
-  public void setProfesor(Responsable profesor) {
-    this.profesor = profesor;
+  public void setResponsable(Responsable responsable) {
+    this.responsable = responsable;
   }
   
-  public Habitacion getLugar() {
-    return lugar;
+  public Habitacion getHabitacion() {
+    return habitacion;
   }
   
-  public void setLugar(Habitacion lugar) {
-    this.lugar = lugar;
+  public void setHabitacion(Habitacion habitacion) {
+    this.habitacion = habitacion;
   }
   
-  public Grupo getGrupo() {
-    return grupo;
+  public Equipo getEquipo() {
+    return equipo;
   }
   
-  public void setGrupo(Grupo grupo) {
-    this.grupo = grupo;
+  public void setEquipo(Equipo equipo) {
+    this.equipo = equipo;
   }
   
   public int getHoraInicio() {
@@ -69,13 +69,13 @@ public class Resguardo {
 
   public Resguardo() {}
 
-  public Resguardo(Long id, Tema asignatura, Responsable profesor, Habitacion lugar, Grupo grupo,
+  public Resguardo(Long id, Tema tema, Responsable responsable, Habitacion habitacion, Equipo equipo,
       int horaInicio, LocalDate fecha) {
     this.id = id;
-    setAsignatura(asignatura);
-    setProfesor(profesor);
-    setLugar(lugar);
-    setGrupo(grupo);
+    setTema(tema);
+    setResponsable(responsable);
+    setHabitacion(habitacion);
+    setEquipo(equipo);
     setHoraInicio(horaInicio);
     setFecha(fecha);
   }

@@ -6,8 +6,8 @@ import java.util.Set;
 public class Responsable {
   private Integer id;
   private String nombre;
-  private Set<Resguardo> reservas;
-  private Set<Tema> asignaturas;
+  private Set<Resguardo> resguardos;
+  private Set<Tema> temas;
 
   public Integer getId() {
     return id;
@@ -25,33 +25,32 @@ public class Responsable {
     this.nombre = nombre;
   }
   
-  public Set<Tema> getAsignaturas() {
-    return asignaturas;
+  public Set<Tema> getTemas() {
+    return this.temas;
   }
   
-  public void setAsignaturas(Set<Tema> asignaturas) {
-    this.asignaturas = asignaturas;
+  public void setTemas(Set<Tema> temas) {
+    this.temas = temas;
   }
   
-  public Set<Resguardo> getReservas() {
-    return reservas;
+  public Set<Resguardo> getResguardo() {
+    return this.resguardos;
   }
   
-  public void setReservas(Set<Resguardo> reservas) {
-    this.reservas = reservas;
+  public void setResguardo(Set<Resguardo> resguardos) {
+    this.resguardos = resguardos;
   }
   
   public Responsable() {
-    reservas = new HashSet<Resguardo>();
-    asignaturas = new HashSet<Tema>();
+    resguardos = new HashSet<Resguardo>();
+    temas = new HashSet<Tema>();
   }
   
-  public Responsable(Integer id, String nombre, Set<Resguardo> reservas, Set<Tema> asignaturas) {
-    super();
-    this.id = id;
-    this.nombre = nombre;
-    this.reservas = reservas;
-    this.asignaturas = asignaturas;
+  public Responsable(Integer id, String nombre, Set<Resguardo> resguardos, Set<Tema> temas) {
+    setId(id);
+    setNombre(nombre);
+    setResguardo(resguardos);
+    setTemas(temas);
   }
   
   @Override
